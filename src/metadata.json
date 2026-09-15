@@ -1,0 +1,6 @@
+{
+  "name": "Health Tracker & Vitals Sync",
+  "description": "Personal health tracking dashboard with Firebase user authentication and Cloud Firestore data synchronization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
