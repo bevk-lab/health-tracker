@@ -1,0 +1,119 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile & Settings",
+      "description": "User profile, goals, points, and emergency information",
+      "type": "object",
+      "properties": {
+        "fullName": { "type": "string" },
+        "phone": { "type": "string" },
+        "dob": { "type": "string" },
+        "gender": { "type": "string" },
+        "address": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "points": { "type": "number" },
+        "streak": { "type": "number" },
+        "lastCheckInDate": { "type": "string" },
+        "claimedRewards": { "type": "array", "items": { "type": "string" } },
+        "emergencyContact": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "relationship": { "type": "string" },
+            "phone": { "type": "string" }
+          }
+        },
+        "knownAllergies": {
+          "type": "object",
+          "properties": {
+            "medications": { "type": "string" },
+            "food": { "type": "string" },
+            "drinks": { "type": "string" }
+          }
+        },
+        "goals": {
+          "type": "object",
+          "properties": {
+            "waterTarget": { "type": "number" },
+            "waterCurrent": { "type": "number" },
+            "stepsTarget": { "type": "number" },
+            "stepsCurrent": { "type": "number" },
+            "sleepTarget": { "type": "number" },
+            "sleepCurrent": { "type": "number" }
+          }
+        },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "VitalsRecord": {
+      "title": "Vitals Record",
+      "description": "Logged health telemetry readings and symptoms",
+      "type": "object",
+      "properties": {
+        "sys": { "type": "number" },
+        "dia": { "type": "number" },
+        "pulse": { "type": "number" },
+        "spo2": { "type": "number" },
+        "bloodSugar": { "type": "number" },
+        "temperature": { "type": "number" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "tag": { "type": "string" },
+        "mealStatus": { "type": "string" },
+        "hasAllergyReaction": { "type": "boolean" },
+        "allergyDetails": { "type": "string" },
+        "isAbnormal": { "type": "boolean" },
+        "anomalyReasons": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "Appointment": {
+      "title": "Medical Appointment",
+      "description": "Doctor appointments and visit prep notes",
+      "type": "object",
+      "properties": {
+        "doctorName": { "type": "string" },
+        "specialty": { "type": "string" },
+        "location": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "JournalEntry": {
+      "title": "Mental Wellness & Brain Dump Entry",
+      "description": "Daily journal, mood reflection, and vibe tags",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "mood": { "type": "string" },
+        "moodEmoji": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile, gamification points, goals, and emergency data"
+    },
+    "/users/{userId}/vitals/{vitalId}": {
+      "schema": "VitalsRecord",
+      "description": "Vitals and symptom log entries for user"
+    },
+    "/users/{userId}/appointments/{appointmentId}": {
+      "schema": "Appointment",
+      "description": "Doctor appointments scheduled by user"
+    },
+    "/users/{userId}/journal/{journalId}": {
+      "schema": "JournalEntry",
+      "description": "Brain dump and wellness journal entries for user"
+    }
+  }
+}
