@@ -82,7 +82,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       {/* Welcome Banner with GenZ greeting & Cloud indicator */}
       <div className="bg-gradient-to-r from-purple-200 via-pink-200 to-yellow-100 border-3 border-slate-900 rounded-3xl p-6 shadow-[5px_5px_0px_0px_#0f172a] relative overflow-hidden">
         <div className="absolute -top-2 -right-2 text-5xl opacity-40 animate-pulse pointer-events-none select-none">
-          âœ¨ðŸ‘‘ðŸ’–
+          ✨👑💖
         </div>
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
@@ -97,7 +97,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </div>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
-              Hey {user.fullName?.split(' ')[0] || 'Bestie'}, slay today! âœ¨
+              Hey {user.fullName?.split(' ')[0] || 'Bestie'}, slay today! ✨
             </h1>
             <p className="text-sm font-semibold text-slate-700 mt-1 max-w-xl">
               Keep your body balanced, hydrate often, and log your tea & vitals to sync directly with Cloud Firestore and claim cute rewards!
@@ -110,21 +110,21 @@ export const HomeView: React.FC<HomeViewProps> = ({
               onClick={() => onNavigate('social')}
               className="flex items-center gap-1.5 bg-purple-600 hover:bg-purple-700 text-white border-2 border-slate-900 px-4 py-2.5 rounded-2xl font-black text-xs sm:text-sm shadow-[3px_3px_0px_0px_#0f172a] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer"
             >
-              <span>ðŸ‘¥ Squad &amp; Duels</span>
+              <span>👥 Squad &amp; Duels</span>
             </button>
             <button
               id="home-quick-log-btn"
               onClick={() => onNavigate('input')}
               className="flex items-center gap-1.5 bg-yellow-300 hover:bg-yellow-400 text-slate-900 border-2 border-slate-900 px-4 py-2.5 rounded-2xl font-black text-xs sm:text-sm shadow-[3px_3px_0px_0px_#0f172a] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer"
             >
-              <span>âš¡ Log Vitals</span>
+              <span>⚡ Log Vitals</span>
             </button>
             <button
               id="home-tea-btn"
               onClick={() => onNavigate('analytics')}
               className="flex items-center gap-1.5 bg-pink-300 hover:bg-pink-400 text-slate-900 border-2 border-slate-900 px-4 py-2.5 rounded-2xl font-black text-xs sm:text-sm shadow-[3px_3px_0px_0px_#0f172a] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer"
             >
-              <span>ðŸ§‹ Health Tea</span>
+              <span>🧋 Health Tea</span>
             </button>
           </div>
         </div>
@@ -140,13 +140,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <div>
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
-                <span className="text-2xl">ðŸ†</span>
+                <span className="text-2xl">🏆</span>
                 <h2 className="text-lg font-black text-slate-900">Gamified Glow Rewards</h2>
               </div>
 
               {/* Animated cheering icon/sticker */}
               <div className="flex items-center gap-1.5 bg-yellow-300 border-2 border-slate-900 px-3 py-1 rounded-full text-xs font-black shadow-[2px_2px_0px_0px_#000] animate-bounce">
-                <span className="text-lg animate-spin" style={{ animationDuration: '3s' }}>ðŸŽ‰</span>
+                <span className="text-lg animate-spin" style={{ animationDuration: '3s' }}>🎉</span>
                 <span>{points} PTS</span>
               </div>
             </div>
@@ -158,22 +158,22 @@ export const HomeView: React.FC<HomeViewProps> = ({
             {/* Progress Bar towards 100 pts */}
             <div
               id="goal-100pts-card"
-              onClick={() => onRedeemReward('Panadol / Band-aids Pack ðŸ©¹', 100)}
+              onClick={() => onRedeemReward('Panadol / Band-aids Pack 🩹', 100)}
               className="bg-white hover:bg-yellow-50/60 border-2 border-slate-900 rounded-2xl p-3.5 shadow-[2px_2px_0px_0px_#000] mb-4 cursor-pointer transition-all active:translate-y-0.5 group"
               title="Click to view 100 PTS Prize & Shipping details"
             >
               <div className="flex justify-between text-xs font-bold text-slate-800 mb-1.5">
                 <span className="flex items-center gap-1.5">
-                  <span className="group-hover:scale-110 transition-transform">ðŸŽ¯</span>
+                  <span className="group-hover:scale-110 transition-transform">🎯</span>
                   <span className="font-black">Goal: 100 pts</span>
-                  <span className="text-[11px] font-extrabold text-purple-700">(Panadol / Cute Band-aids ðŸ©¹)</span>
+                  <span className="text-[11px] font-extrabold text-purple-700">(Panadol / Cute Band-aids 🩹)</span>
                 </span>
                 <span className={`px-2 py-0.5 rounded-full border border-slate-900 text-[10px] font-black shadow-[1px_1px_0px_0px_#000] ${
                   points >= 100
                     ? 'bg-yellow-300 text-slate-900 animate-pulse'
                     : 'bg-slate-100 text-slate-700'
                 }`}>
-                  {points >= 100 ? 'CLAIM READY ðŸŽ' : `${Math.min(points, 100)} / 100 pts`}
+                  {points >= 100 ? 'CLAIM READY 🎁' : `${Math.min(points, 100)} / 100 pts`}
                 </span>
               </div>
               <div className="w-full bg-slate-200 h-4 rounded-full border-2 border-slate-900 overflow-hidden relative">
@@ -183,9 +183,9 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 />
               </div>
               <div className="flex justify-between text-[10px] font-extrabold text-slate-500 mt-1.5">
-                <span>0 pts: Newbie ðŸ£</span>
-                <span>50 pts: Matcha Latte ðŸµ</span>
-                <span className="text-purple-700 font-black">100 pts: Panadol Pack ðŸ©¹ (Tap to Claim)</span>
+                <span>0 pts: Newbie 🐣</span>
+                <span>50 pts: Matcha Latte 🍵</span>
+                <span className="text-purple-700 font-black">100 pts: Panadol Pack 🩹 (Tap to Claim)</span>
               </div>
             </div>
           </div>
@@ -202,14 +202,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   : 'bg-emerald-300 hover:bg-emerald-400 text-slate-900 shadow-[3px_3px_0px_0px_#000] active:translate-y-0.5'
               }`}
             >
-              <span>{hasCheckedInToday ? 'âœ… Claimed for Today' : 'âœ¨ Daily Check-in (+20 pts)'}</span>
+              <span>{hasCheckedInToday ? '✅ Claimed for Today' : '✨ Daily Check-in (+20 pts)'}</span>
             </button>
 
             <button
               id="redeem-100-btn"
-              onClick={() => onRedeemReward('Panadol / Band-aids Pack ðŸ©¹', 100)}
+              onClick={() => onRedeemReward('Panadol / Band-aids Pack 🩹', 100)}
               className={`flex items-center gap-1.5 py-2.5 px-3 rounded-2xl font-black text-xs border-2 border-slate-900 transition-all cursor-pointer ${
-                claimedRewards && (claimedRewards.includes('Panadol / Band-aids Pack ðŸ©¹') || claimedRewards.includes('Panadol & Cute Band-aids Pack ðŸ©¹'))
+                claimedRewards && (claimedRewards.includes('Panadol / Band-aids Pack 🩹') || claimedRewards.includes('Panadol & Cute Band-aids Pack 🩹'))
                   ? 'bg-purple-200 hover:bg-purple-300 text-purple-900 border-slate-900 shadow-[2px_2px_0px_0px_#000]'
                   : points >= 100
                   ? 'bg-yellow-300 hover:bg-yellow-400 text-slate-900 shadow-[3px_3px_0px_0px_#000] active:translate-x-0.5 active:translate-y-0.5'
@@ -218,10 +218,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
             >
               <Gift size={14} className={points >= 100 ? 'text-purple-700 animate-bounce' : ''} />
               <span>
-                {claimedRewards && (claimedRewards.includes('Panadol / Band-aids Pack ðŸ©¹') || claimedRewards.includes('Panadol & Cute Band-aids Pack ðŸ©¹'))
-                  ? 'View Claimed Prize ðŸŽ'
+                {claimedRewards && (claimedRewards.includes('Panadol / Band-aids Pack 🩹') || claimedRewards.includes('Panadol & Cute Band-aids Pack 🩹'))
+                  ? 'View Claimed Prize 🎁'
                   : points >= 100
-                  ? 'ðŸŽ‰ Claim 100pts Goal!'
+                  ? '🎉 Claim 100pts Goal!'
                   : 'Goal 100pts (Preview)'}
               </span>
             </button>
@@ -236,7 +236,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <div>
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
-                <span className="text-2xl">ðŸ—“ï¸</span>
+                <span className="text-2xl">🗓️</span>
                 <h2 className="text-lg font-black text-slate-900">Next Doctor Sesh</h2>
               </div>
               <span className="bg-orange-300 border-2 border-slate-900 text-slate-900 text-[10px] font-black px-2 py-0.5 rounded-full shadow-[1px_1px_0px_0px_#000]">
@@ -263,7 +263,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   <span className="truncate">{nextAppointment.location}</span>
                 </div>
                 <div className="text-[11px] bg-orange-50 border border-orange-200 rounded-xl p-2 font-medium text-slate-700 flex justify-between items-center">
-                  <span>ðŸ—“ï¸ <strong>Date:</strong> {nextAppointment.date}</span>
+                  <span>🗓️ <strong>Date:</strong> {nextAppointment.date}</span>
                   <span className="text-[10px] font-bold text-orange-800 bg-orange-200 px-1.5 py-0.5 rounded-md">
                     Upcoming
                   </span>
@@ -271,7 +271,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </div>
             ) : (
               <div className="bg-white border-2 border-dashed border-slate-400 rounded-2xl p-4 text-center">
-                <p className="text-xs font-bold text-slate-500">No appointments booked bestie! ðŸ§˜â€â™€ï¸</p>
+                <p className="text-xs font-bold text-slate-500">No appointments booked bestie! 🧘‍♀️</p>
                 <p className="text-[11px] text-slate-400 mt-1">Book your doctor visits in the Calendar tab.</p>
               </div>
             )}
@@ -291,7 +291,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       <div>
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <span className="text-2xl">ðŸ’–</span>
+            <span className="text-2xl">💖</span>
             <h2 className="text-lg font-black text-slate-900">Latest Vitals & Status Check</h2>
           </div>
           <span className="text-xs font-bold text-slate-500 bg-white border border-slate-900 px-2.5 py-0.5 rounded-full shadow-[1px_1px_0px_0px_#000]">
@@ -306,7 +306,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <span className="text-[11px] font-extrabold uppercase tracking-wide text-slate-700">
                 Blood Pressure
               </span>
-              <span className="text-xl">ðŸ©º</span>
+              <span className="text-xl">🩺</span>
             </div>
             <div className="my-2">
               <div className="flex items-baseline gap-1">
@@ -322,7 +322,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   isBpWarning ? 'bg-red-400 text-white' : 'bg-emerald-300 text-slate-900'
                 }`}
               >
-                {isBpWarning ? 'âš ï¸ Warning' : 'âœ… Normal'}
+                {isBpWarning ? '⚠️ Warning' : '✅ Normal'}
               </span>
             </div>
           </div>
@@ -333,7 +333,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <span className="text-[11px] font-extrabold uppercase tracking-wide text-slate-700">
                 Pulse Rate
               </span>
-              <span className="text-xl">ðŸ’“</span>
+              <span className="text-xl">💓</span>
             </div>
             <div className="my-2">
               <div className="flex items-baseline gap-1">
@@ -347,7 +347,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   isPulseWarning ? 'bg-red-400 text-white' : 'bg-emerald-300 text-slate-900'
                 }`}
               >
-                {isPulseWarning ? 'âš ï¸ Warning' : 'âœ… Normal'}
+                {isPulseWarning ? '⚠️ Warning' : '✅ Normal'}
               </span>
             </div>
           </div>
@@ -358,7 +358,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <span className="text-[11px] font-extrabold uppercase tracking-wide text-slate-700">
                 SpO2 Oxygen
               </span>
-              <span className="text-xl">ðŸ«</span>
+              <span className="text-xl">🫁</span>
             </div>
             <div className="my-2">
               <div className="flex items-baseline gap-1">
@@ -372,7 +372,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   isSpo2Warning ? 'bg-red-400 text-white' : 'bg-emerald-300 text-slate-900'
                 }`}
               >
-                {isSpo2Warning ? 'âš ï¸ Warning' : 'âœ… Normal'}
+                {isSpo2Warning ? '⚠️ Warning' : '✅ Normal'}
               </span>
             </div>
           </div>
@@ -383,7 +383,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <span className="text-[11px] font-extrabold uppercase tracking-wide text-slate-700">
                 Blood Sugar
               </span>
-              <span className="text-xl">ðŸ©¸</span>
+              <span className="text-xl">🩸</span>
             </div>
             <div className="my-2">
               <div className="flex items-baseline gap-1">
@@ -397,7 +397,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   isSugarWarning ? 'bg-red-400 text-white' : 'bg-emerald-300 text-slate-900'
                 }`}
               >
-                {isSugarWarning ? 'âš ï¸ Warning' : 'âœ… Normal'}
+                {isSugarWarning ? '⚠️ Warning' : '✅ Normal'}
               </span>
             </div>
           </div>
@@ -408,14 +408,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <span className="text-[11px] font-extrabold uppercase tracking-wide text-slate-700">
                 Body Temp
               </span>
-              <span className="text-xl">ðŸŒ¡ï¸</span>
+              <span className="text-xl">🌡️</span>
             </div>
             <div className="my-2">
               <div className="flex items-baseline gap-1">
                 <span className="text-2xl sm:text-3xl font-black text-slate-900">
                   {latestVitals.temperature}
                 </span>
-                <span className="text-[10px] font-bold text-slate-500">Â°C</span>
+                <span className="text-[10px] font-bold text-slate-500">°C</span>
               </div>
             </div>
             <div className="flex items-center justify-between">
@@ -424,7 +424,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   isTempWarning ? 'bg-red-400 text-white' : 'bg-emerald-300 text-slate-900'
                 }`}
               >
-                {isTempWarning ? 'âš ï¸ Fever' : 'âœ… Normal'}
+                {isTempWarning ? '⚠️ Fever' : '✅ Normal'}
               </span>
             </div>
           </div>
